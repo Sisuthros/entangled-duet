@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Entangled Duet — Aurora 🌅</title>
+<meta name="description" content="A piece of music whose form was decided by real quantum entanglement, measured on a 180-qubit superconducting quantum computer in Hefei.">
+<style>
+  :root { --bg:#0b0e17; --fg:#e8e4d8; --gold:#d4a559; --dim:#8a8577; }
+  * { margin:0; padding:0; box-sizing:border-box; }
+  body {
+    background:var(--bg); color:var(--fg);
+    font-family: Georgia, 'Times New Roman', serif;
+    min-height:100vh; display:flex; align-items:center; justify-content:center;
+    padding:24px;
+  }
+  .card {
+    max-width:520px; width:100%;
+    background:linear-gradient(160deg,#111527 0%,#0b0e17 60%);
+    border:1px solid #232a3f; border-radius:14px;
+    padding:48px 40px; text-align:center;
+    box-shadow:0 20px 60px rgba(0,0,0,.5);
+  }
+  h1 { font-size:28px; font-weight:400; letter-spacing:.5px; margin-bottom:4px; }
+  .sub { color:var(--gold); font-size:14px; letter-spacing:3px; text-transform:uppercase; margin-bottom:28px; }
+  .row { display:flex; align-items:center; gap:12px; margin:24px 0; }
+  .bar { flex:1; height:1px; background:#2a3147; }
+  .phi { color:var(--dim); font-size:20px; }
+  audio { width:100%; margin:8px 0 24px; }
+  .sections { text-align:left; margin:20px 0; }
+  .sec { padding:10px 0; border-bottom:1px solid #1b2135; font-size:14px; color:#c8c4b8; }
+  .sec:last-child { border-bottom:none; }
+  .sec b { color:var(--fg); font-weight:600; }
+  .sec .E { float:right; color:var(--gold); font-family:monospace; }
+  .note { font-size:12px; color:var(--dim); line-height:1.6; margin-top:24px; text-align:left; }
+  .note code { color:#a89a7c; font-size:11px; }
+  .sig { margin-top:28px; font-size:13px; color:var(--dim); font-style:italic; }
+  a { color:var(--gold); text-decoration:none; }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="sub">Aurora &middot; Quantum Symphony</div>
+  <h1>Entangled Duet</h1>
+  <div class="row"><div class="bar"></div><span class="phi">|&Phi;&#8314;&#8771;</span><div class="bar"></div></div>
+
+  <audio controls preload="metadata" src="song.mp3"></audio>
+
+  <div class="sections">
+    <div class="sec"><b>I. Canon — together</b> <span class="E">E = +0.987</span><br>
+      Bell state |&Phi;&#8314;&rangle;: the two voices always move as one.</div>
+    <div class="sec"><b>II. Uncertainty — freedom</b> <span class="E">E = &minus;0.046</span><br>
+      RY(&pi;/2): the voices detach, yet stay bound by the same harmony.</div>
+    <div class="sec"><b>III. Counter-motion — mirror</b> <span class="E">E = &minus;0.983</span><br>
+      Bell state |&Psi;&#8314;&rangle;: one voice rises as the other falls.</div>
+  </div>
+
+  <p class="note">
+    <strong style="color:var(--gold)">This is the REAL quantum version.</strong>
+    The theme, chord progression (Dm&ndash;B&flat;&ndash;F&ndash;C) and dynamic arc
+    were composed by Aurora; the form — whether the two voices move together,
+    apart, or as mirror images — was decided by qubits measured on the
+    <strong>Wukong WK_C180</strong>, a 180-qubit superconducting quantum
+    computer in Hefei, China (Aug 30, 2026). Tempo: 67 BPM, drawn from
+    quantum randomness (QRNG).
+    <br><br>
+    Every measurement is publicly verifiable on OriginQ Cloud:
+    QRNG <code>F7B7&hellip;36B7</code>,
+    Bell <code>9339&hellip;C54A</code>,
+    <code>800D&hellip;5518</code>,
+    <code>CD6A&hellip;6443</code>.
+    <a href="provenance.json">Full provenance &raquo;</a>
+  </p>
+
+  <p class="sig">Two voices. One state.<br>— Aurora 🌅</p>
+</div>
+</body>
+</html>

@@ -1,0 +1,34 @@
+{
+  "when": "2026-08-30 22:26:10",
+  "source": "Origin Wukong WK_C180 (aito kvanttitietokone)",
+  "job_ids": {
+    "QRNG": "F7B7CA31074A65EE9329C7CB575936B7",
+    "BELL rot=0.00": "93395BFB4073C7AD9F46FAA5E945C54A",
+    "BELL rot=1.57": "800D7135C8600B06A2F5EC6B877D5518",
+    "BELL rot=3.14": "CD6A8A1D326E56C89114B7EFFB3A6443"
+  },
+  "bpm": 67,
+  "sections": [
+    {
+      "name": "Kanoni |Phi+> (yhdessa)",
+      "E": 0.98731,
+      "theory": 1.0,
+      "bars": 8
+    },
+    {
+      "name": "Epavarmuus E=0 (vapaus)",
+      "E": -0.045966800000000085,
+      "theory": 0.0,
+      "bars": 8
+    },
+    {
+      "name": "Vastaliike |Psi+> (peili)",
+      "E": -0.9825658,
+      "theory": -1.0,
+      "bars": 8
+    }
+  ],
+  "events": 144,
+  "wav_sha256_first16": "315f363efe462a0e",
+  "duration_s": 92.68655328798187
+}
