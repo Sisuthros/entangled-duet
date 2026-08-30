@@ -1,0 +1,41 @@
+{
+  "when": "2026-08-30 22:50:35",
+  "source": "Origin Wukong WK_C180 (aito kvanttitietokone)",
+  "title": "Teleportation Nocturne",
+  "job_ids": {
+    "QRNG": "F22F317EE0C934D143C152A2B90EE808",
+    "GHZ": "7C18EA6AFBBB98D59BC63077AAFC84EB",
+    "BELL-free": "3C7F425D6943EC5E785C3ED52156B3C9",
+    "BELL-mirror": "FF70823277E71EB261EAAD8A334E97ED"
+  },
+  "bpm": 66,
+  "mode": "harmonic minor",
+  "sections": [
+    {
+      "name": "I. Entangled",
+      "state": "GHZ |000>+|111>",
+      "E": 0.5497972000000001,
+      "bars": 8
+    },
+    {
+      "name": "II. The Measurement",
+      "state": "RY(pi/2)",
+      "E": 0.047653500000000126,
+      "bars": 8
+    },
+    {
+      "name": "III. Reborn",
+      "state": "Bell |Psi+>",
+      "E": -0.9748527,
+      "bars": 10
+    },
+    {
+      "name": "Outro",
+      "state": "Picardy third (A major)",
+      "bars": 3
+    }
+  ],
+  "events": 5,
+  "wav_sha256_first16": "7953ddb9638b6718",
+  "duration_s": 116.72725623582767
+}
