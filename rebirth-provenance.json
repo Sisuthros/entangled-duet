@@ -1,0 +1,43 @@
+{
+  "when": "2026-08-31 00:11:15",
+  "source": "Origin Wukong WK_C180 (aito kvanttitietokone)",
+  "title": "Teleportation Rebirth (v5)",
+  "job_ids": {
+    "QRNG": "50DC1CFD36CBD7E73028A8B88D26C04E",
+    "GHZ": "B94EDAAA5BE53952FBCCD5E153A2AC4D",
+    "BELL-free": "B314546B67637C11F12F7F0891520930",
+    "BELL-mirror": "293D935568EC837E570854E650D3B3CC"
+  },
+  "bpm": 105,
+  "mode": "ionian",
+  "progression": "A E F#m D",
+  "sections": [
+    {
+      "name": "I. Entangled",
+      "state": "GHZ |000>+|111>",
+      "E": 0.5755210000000001,
+      "bars": 8
+    },
+    {
+      "name": "II. The Measurement",
+      "state": "RY(pi/2)",
+      "E": 0.29144349999999997,
+      "bars": 8
+    },
+    {
+      "name": "III. Reborn",
+      "state": "Bell |Psi+>",
+      "E": -0.6387257,
+      "bars": 10
+    },
+    {
+      "name": "Outro",
+      "state": "major resolution",
+      "bars": 4
+    }
+  ],
+  "clash_index": 0.17,
+  "notes": 627,
+  "wav_sha256_first16": "6a845dc4bd285342",
+  "duration_s": 76.1
+}
