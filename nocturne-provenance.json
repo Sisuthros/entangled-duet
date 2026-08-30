@@ -1,32 +1,33 @@
 {
-  "when": "2026-08-30 22:50:35",
+  "when": "2026-08-30 23:40:57",
   "source": "Origin Wukong WK_C180 (aito kvanttitietokone)",
-  "title": "Teleportation Nocturne",
+  "title": "Teleportation Nocturne (v4)",
   "job_ids": {
-    "QRNG": "F22F317EE0C934D143C152A2B90EE808",
-    "GHZ": "7C18EA6AFBBB98D59BC63077AAFC84EB",
-    "BELL-free": "3C7F425D6943EC5E785C3ED52156B3C9",
-    "BELL-mirror": "FF70823277E71EB261EAAD8A334E97ED"
+    "QRNG": "84E8590744961A73F8A1AB3ED0902C58",
+    "GHZ": "1BD80A5ABE7F95CDFA040524303DD8A6",
+    "BELL-free": "E75A308B5C3ABD4063B3D12FA2538CA7",
+    "BELL-mirror": "EFC20DD581A09BC381C2B3E59639E2F5"
   },
-  "bpm": 66,
-  "mode": "harmonic minor",
+  "bpm": 68,
+  "mode": "aeolian",
+  "progression": "Am Dm G C",
   "sections": [
     {
       "name": "I. Entangled",
       "state": "GHZ |000>+|111>",
-      "E": 0.5497972000000001,
+      "E": 0.5829439,
       "bars": 8
     },
     {
       "name": "II. The Measurement",
       "state": "RY(pi/2)",
-      "E": 0.047653500000000126,
+      "E": 0.30592919999999996,
       "bars": 8
     },
     {
       "name": "III. Reborn",
       "state": "Bell |Psi+>",
-      "E": -0.9748527,
+      "E": -0.6343289,
       "bars": 10
     },
     {
@@ -35,7 +36,8 @@
       "bars": 3
     }
   ],
-  "events": 5,
-  "wav_sha256_first16": "7953ddb9638b6718",
-  "duration_s": 116.72725623582767
+  "clash_index": 0.09123,
+  "notes": 330,
+  "wav_sha256_first16": "4f2d4257e23819af",
+  "duration_s": 112.0
 }

@@ -273,19 +273,19 @@ footer{margin-top:120px;padding:70px 0 60px;border-top:1px solid var(--border)}
     <article class="track rv" data-song="nocturne.mp3" data-sections="0.26,0.50,0.78">
       <div class="no">02</div>
       <h2>Teleportation <em>Nocturne</em></h2>
-      <div class="sub">A harmonic minor · 66 BPM · QRNG mode &amp; tempo</div>
+      <div class="sub">A aeolian · 68 BPM · QRNG mode &amp; tempo</div>
 
       <div class="player">
         <button class="play" aria-label="Play Teleportation Nocturne"><span class="tri"></span><span class="bars"><i></i><i></i><i></i></span></button>
-        <div class="meta"><div class="t">Teleportation Nocturne</div><div class="d">1:57 · WuKong WK_C180</div></div>
+        <div class="meta"><div class="t">Teleportation Nocturne</div><div class="d">1:52 · WuKong WK_C180</div></div>
         <div class="seek"><div class="rail"><div class="fill"></div><div class="knob"></div></div></div>
       </div>
 
       <div class="movements">
         <div class="mv-hd"><span class="c1"></span><span class="c2">Movement</span><span class="c3">Quantum state</span><span class="c4">Correlation</span></div>
-        <div class="mv"><span class="rn">I.</span><span class="nm">Entangled — unison</span><span class="st">GHZ |000⟩+|111⟩</span><span class="ee">E = +0.55</span></div>
-        <div class="mv"><span class="rn">II.</span><span class="nm">The Measurement — collapse</span><span class="st">RY(π/2)</span><span class="ee">E = +0.048</span></div>
-        <div class="mv"><span class="rn">III.</span><span class="nm">Reborn — mirrored theme</span><span class="st">|Ψ⁺⟩ Bell</span><span class="ee">E = −0.975</span></div>
+        <div class="mv"><span class="rn">I.</span><span class="nm">Entangled — unison</span><span class="st">GHZ |000⟩+|111⟩</span><span class="ee">E = +0.583</span></div>
+        <div class="mv"><span class="rn">II.</span><span class="nm">The Measurement — collapse</span><span class="st">RY(π/2)</span><span class="ee">E = +0.306</span></div>
+        <div class="mv"><span class="rn">III.</span><span class="nm">Reborn — mirrored theme</span><span class="st">|Ψ⁺⟩ Bell</span><span class="ee">E = −0.634</span></div>
         <div class="mv"><span class="rn">IV.</span><span class="nm">Picardy third — A major</span><span class="st">post-measurement</span><span class="ee">tonal shift</span></div>
         <div class="mv-legend"><b>E</b> is the correlation computed from the measured qubit outcomes: +1 unison, 0 collapse, −1 reborn as a mirror.</div>
       </div>
@@ -293,8 +293,8 @@ footer{margin-top:120px;padding:70px 0 60px;border-top:1px solid var(--border)}
       <p class="prov">
         <b>Provenance</b> — a melody dies in the measurement and is reborn mirrored;
         it ends on a Picardy third (A major) because the measurement changed the state
-        for good. Jobs: QRNG <code>F22F…E808</code> · GHZ <code>7C18…84EB</code> ·
-        Bell <code>3C7F…B3C9</code> · <code>FF70…97ED</code>.
+        for good. Jobs: QRNG <code>84E8…2C58</code> · GHZ <code>1BD8…D8A6</code> ·
+        Bell <code>E75A…3CA7</code> · <code>EFC2…2F5</code>.
         <a href="nocturne-provenance.json">Full provenance ↗</a>
       </p>
     </article>
@@ -369,16 +369,20 @@ let W,H,t=0;
 function fit(){W=cv.width=cv.offsetWidth*devicePixelRatio;H=cv.height=cv.offsetHeight*devicePixelRatio}
 fit();addEventListener('resize',fit);
 
-// section boundaries per track (fractions) — E target per phase
-const E_CANON=+0.987,E_FREE=-0.046,E_MIRROR=-0.983;
+// section boundaries per track (fractions) — E target per phase, per biisi
+const E_BY_SONG={
+  'duet.mp3':[+0.987,-0.046,-0.983],
+  'nocturne.mp3':[+0.583,+0.306,-0.634]
+};
 function phaseE(){
   const p=window.QD.active;
   if(!p)return 0.55+0.25*Math.sin(t*0.0006); // idle: gentle float
   const f=p.frac();
   const s=p.article.dataset.sections.split(',').map(Number);
-  if(f<s[0])return E_CANON;
-  if(f<s[1])return E_FREE;
-  if(f<s[2])return E_MIRROR;
+  const es=E_BY_SONG[p.article.dataset.song]||[0.987,-0.046,-0.983];
+  if(f<s[0])return es[0];
+  if(f<s[1])return es[1];
+  if(f<s[2])return es[2];
   return 0.9; // outro: resolving
 }
 
